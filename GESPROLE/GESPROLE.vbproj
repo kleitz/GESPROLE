@@ -1,0 +1,513 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{63AA503A-0F76-425F-A977-CB1C47CD5CCB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>GESPROLE.My.MyApplication</StartupObject>
+    <RootNamespace>GESPROLE</RootNamespace>
+    <AssemblyName>GESPROLE</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>5</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>GESPROLE.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>GESPROLE.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>GESPROLE.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>BAB62591E083FA06A04366848DDA9FEC4F006AD4</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>GESPROLE_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ComboDialog">
+      <HintPath>..\..\..\Visual Studio 2015\Projects\ComboDialog\ComboDialog\bin\Release\ComboDialog.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 6.9.9\Assemblies\v4.5\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\Log.vb" />
+    <Compile Include="Data\MyResourceMgr.vb" />
+    <Compile Include="Data\Notification.vb" />
+    <Compile Include="Data\Stats.vb" />
+    <Compile Include="Data\Validation.vb" />
+    <Compile Include="Data\Cow.vb" />
+    <Compile Include="Data\Establishment.vb" />
+    <Compile Include="Data\LifeEvent.vb" />
+    <Compile Include="Data\Lot.vb" />
+    <Compile Include="Data\MilkControl.vb" />
+    <Compile Include="Data\KryptUtils.vb" />
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Recria.Designer.vb">
+      <DependentUpon>Recria.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Recria.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataInput\TamboData.Designer.vb">
+      <DependentUpon>TamboData.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DataInput\TamboData.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XtraForms\About.Designer.vb">
+      <DependentUpon>About.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraForms\About.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataInput\ConnectionConfig.Designer.vb">
+      <DependentUpon>ConnectionConfig.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DataInput\ConnectionConfig.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CowAdd.Designer.vb">
+      <DependentUpon>CowAdd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CowAdd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CowSearch.Designer.vb">
+      <DependentUpon>CowSearch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CowSearch.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CowData.Designer.vb">
+      <DependentUpon>CowData.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CowData.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CtrlAdd.Designer.vb">
+      <DependentUpon>CtrlAdd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CtrlAdd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CtrlEdit.Designer.vb">
+      <DependentUpon>CtrlEdit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CtrlEdit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EvtAdd.Designer.vb">
+      <DependentUpon>EvtAdd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EvtAdd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataInput\Config.Designer.vb">
+      <DependentUpon>Config.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DataInput\Config.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BullEvt.Designer.vb">
+      <DependentUpon>BullEvt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BullEvt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XtraForms\List.Designer.vb">
+      <DependentUpon>List.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraForms\List.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Loteo.Designer.vb">
+      <DependentUpon>Loteo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Loteo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.vb">
+      <DependentUpon>Main.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.vb">
+      <DependentUpon>Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="XtraClasses\Resizer.vb" />
+    <Compile Include="Semen.Designer.vb">
+      <DependentUpon>Semen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Semen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataInput\Users.Designer.vb">
+      <DependentUpon>Users.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DataInput\Users.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BullEvt.aa.resx">
+      <DependentUpon>BullEvt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BullEvt.es.resx">
+      <DependentUpon>BullEvt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BullEvt.resx">
+      <DependentUpon>BullEvt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CowAdd.es.resx">
+      <DependentUpon>CowAdd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CowData.es.resx">
+      <DependentUpon>CowData.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CowSearch.es.resx">
+      <DependentUpon>CowSearch.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtrlAdd.es.resx">
+      <DependentUpon>CtrlAdd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtrlEdit.es.resx">
+      <DependentUpon>CtrlEdit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataInput\Config.es.resx">
+      <DependentUpon>Config.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataInput\Config.ibb-NG.resx">
+      <DependentUpon>Config.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataInput\Config.ibb.resx">
+      <DependentUpon>Config.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataInput\Config.is.resx">
+      <DependentUpon>Config.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataInput\ConnectionConfig.es.resx">
+      <DependentUpon>ConnectionConfig.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataInput\TamboData.es.resx">
+      <DependentUpon>TamboData.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataInput\Users.es.resx">
+      <DependentUpon>Users.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EvtAdd.aa.resx">
+      <DependentUpon>EvtAdd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EvtAdd.es.resx">
+      <DependentUpon>EvtAdd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.es.resx">
+      <DependentUpon>Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Loteo.es.resx">
+      <DependentUpon>Loteo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.en-GB.resx">
+      <DependentUpon>Main.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.en-US.resx">
+      <DependentUpon>Main.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.en.resx">
+      <DependentUpon>Main.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.es.resx">
+      <DependentUpon>Main.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recria.aa-DJ.resx">
+      <DependentUpon>Recria.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recria.aa.resx">
+      <DependentUpon>Recria.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recria.es.resx">
+      <DependentUpon>Recria.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recria.resx">
+      <DependentUpon>Recria.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataInput\TamboData.resx">
+      <DependentUpon>TamboData.vb</DependentUpon>
+    </EmbeddedResource>
+    <None Include="GESPROLE_TemporaryKey.pfx" />
+    <None Include="Resources\resource.en-US.resources" />
+    <None Include="Resources\resource.es-ES.resources" />
+    <EmbeddedResource Include="Semen.es.resx">
+      <DependentUpon>Semen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraForms\About.resx">
+      <DependentUpon>About.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataInput\ConnectionConfig.resx">
+      <DependentUpon>ConnectionConfig.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CowAdd.resx">
+      <DependentUpon>CowAdd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CowData.resx">
+      <DependentUpon>CowData.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CowSearch.resx">
+      <DependentUpon>CowSearch.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtrlAdd.resx">
+      <DependentUpon>CtrlAdd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtrlEdit.resx">
+      <DependentUpon>CtrlEdit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EvtAdd.resx">
+      <DependentUpon>EvtAdd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataInput\Config.resx">
+      <DependentUpon>Config.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraForms\List.resx">
+      <DependentUpon>List.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Loteo.resx">
+      <DependentUpon>Loteo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>PublicVbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Semen.resx">
+      <DependentUpon>Semen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataInput\Users.resx">
+      <DependentUpon>Users.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GESPROLE_Vert.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GESPROLE_Banner1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Caravana3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Los-gases-de-las-vacas-contaminan-Mitos-y-verdades.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NKRyptr.jar" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Comment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Extract.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Find.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Repair.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Report.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Test.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\View.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wizard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notification-circle-blue-512-black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notification-circle-blue-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\134088-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wrong-hi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spain-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Flag_of_United_Kingdom_-_Circle-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="GESPROLE.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
